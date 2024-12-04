@@ -77,9 +77,6 @@ cat result.txt
 ```
 
 # 运行截图
-<img width="1438" alt="image" src="https://github.com/user-attachments/assets/5947293b-3ba1-4ce6-a026-c06f016e28c6">
+<img width="1096" alt="image" src="https://github.com/user-attachments/assets/5d9bb89e-5a46-4e13-b203-3d43a3c68753">
 
-<img width="995" alt="image" src="https://github.com/user-attachments/assets/b5aed881-4c4d-4a3a-a2c0-7f2a5d296c8b">
-
-<img width="972" alt="image" src="https://github.com/user-attachments/assets/79ca3d6a-b963-4ffb-99bd-aafb7a5b384e">
 
