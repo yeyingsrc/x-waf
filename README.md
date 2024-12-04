@@ -75,3 +75,7 @@ Content-Length: 50
 ```
 cat result.txt
 ```
+
+# 运行截图
+<img width="1438" alt="image" src="https://github.com/user-attachments/assets/5947293b-3ba1-4ce6-a026-c06f016e28c6">
+
