@@ -1,29 +1,28 @@
-一个基于fuzz的waf绕过测试工具，当前支持命令执行绕过。后续会支持更多绕过方式、攻击类型。
+一个基于fuzz的waf绕过测试工具，当前支持命令执行、SQL注入绕过。后续会支持更多绕过方式、攻击类型。
 
 ```
-Usage of ./client:
-  -debug-file-path string
-        specify request response log file path (default "fuzz_http_request_response.log")
-  -fuzz-cmd string
-        specify command, default is cat /etc/passwd (default "cat /etc/passwd")
-  -fuzz-cmd-interpreter string
-        specify command interpreter, default is bash, can be bash or sh (default "bash")
-  -fuzz-cmd-mode string
-        specify fuzz test case verification mode, default is real, can be real or mock (default "mock")
-  -fuzz-count int
-        specify max fuzz times (default 10000000)
-  -log-level string
-        specify log level, default is info (default "info")
-  -target string
-        specify the request file path
-  -target-https
-        specify whether the request is https protocol (default true)
-  -target-mark string
-        specify the request fuzz position mark (default "%{{.*}}%")
-  -waf-block-regex string
-        specify waf block regex
-  -waf-block-rsp-status-code int
-        specify waf block response status code (default 403)
+Usage:
+  ./x-waf -target <request_file> [flags]
+  ./x-waf [command]
+
+Available Commands:
+  cmd         fuzz cmd injection
+  completion  Generate the autocompletion script for the specified shell
+  help        Help about any command
+  sql         fuzz sql injection
+
+Flags:
+      --debug-file-path string          specify request response log file path
+      --fuzz-count int                  specify max fuzz times (default 10000000)
+  -h, --help                            help for ./x-waf
+      --log-level string                specify log level, default is info (default "info")
+      --target string                   specify the request file path
+      --target-https                    specify whether the request is https protocol (default true)
+      --target-mark string              specify the request fuzz position mark (default "%{{.*}}%")
+      --waf-block-regex string          specify waf block regex
+      --waf-block-rsp-status-code int   specify waf block response status code (default 403)
+
+Use "./x-waf [command] --help" for more information about a command.
 ```
 
 # 使用步骤
@@ -61,14 +60,14 @@ Content-Length: 50
 3、运行命令：
 
 ```
-./x_waf -target test/chatin-cmdchop.http -fuzz-cmd-mode real -waf-block-regex payload
+./x_waf --target test/chatin-cmdchop.http --waf-block-regex payload cmd --fuzz-cmd-mode real
 ```
 
--fuzz-cmd-mode real 会实际执行命令，验证payload是否有效，当前只支持查看/etc/passwd文件内容
+--fuzz-cmd-mode real 会实际执行命令，验证payload是否有效，当前只支持查看/etc/passwd文件内容
 
--fuzz-cmd-mode mock 会解析命令，验证payload是否有效，支持任意命令
+--fuzz-cmd-mode mock 会解析命令，验证payload是否有效，支持任意命令
 
--waf-block-regex payload 指定waf拦截时页面响应的匹配内容，支持正则表达式
+--waf-block-regex payload 指定waf拦截时页面响应的匹配内容，支持正则表达式
 
 4、查看bypass结果：
 
