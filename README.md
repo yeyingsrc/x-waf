@@ -78,4 +78,6 @@ cat result.txt
 # 运行截图
 <img width="1096" alt="image" src="https://github.com/user-attachments/assets/5d9bb89e-5a46-4e13-b203-3d43a3c68753">
 
+# 实战测试
+![image](https://github.com/user-attachments/assets/f016a2e0-22a6-4ee6-85c6-d216295a18b9)
 
