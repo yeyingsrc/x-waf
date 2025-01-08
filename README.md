@@ -76,6 +76,9 @@ Content-Length: 50
 cat result.txt
 ```
 
+# 注意事项
+如果目标不是https，就加`--target-https=false`参数
+
 # 运行截图
 <img width="1096" alt="image" src="https://github.com/user-attachments/assets/5d9bb89e-5a46-4e13-b203-3d43a3c68753">
 
