@@ -79,6 +79,9 @@ cat result.txt
 如果目标不是https，就加`--target-https=false`参数
 
 # 运行截图
-<img width="1096" alt="image" src="https://github.com/user-attachments/assets/5d9bb89e-5a46-4e13-b203-3d43a3c68753">
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/5d9bb89e-5a46-4e13-b203-3d43a3c68753">
+
+# 交流群
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/c4394b37-1882-4e02-945b-8d615ec2ba18">
 
 
