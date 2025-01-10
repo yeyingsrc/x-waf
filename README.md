@@ -15,6 +15,7 @@ Flags:
       --debug-file-path string          specify request response log file path
       --fuzz-count int                  specify max fuzz times (default 10000000)
   -h, --help                            help for ./x-waf
+      --justOutPutPayload               just output payload to payloads.txt
       --log-level string                specify log level, default is info (default "info")
       --target string                   specify the request file path
       --target-https                    specify whether the request is https protocol (default true)
