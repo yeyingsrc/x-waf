@@ -76,6 +76,15 @@ Content-Length: 50
 cat result.txt
 ```
 
+# 和burpsuite配合使用
+当程序遇到各种奇怪的报错时，你可以选择使用x-waf只生成payload，然后用burpsuite intruder模块来遍历发包，根据响应状态码或者响应长度来判断是否拦截。
+
+```
+./x --justOutPutPayload --target test/chatin-sqlchop.http sql --fuzz-sql 'select user from mysql.user' --fuzz-count 1000
+```
+
+--justOutPutPayload 导出payload到payloads.txt文件
+
 # 注意事项
 如果目标不是https，就加`--target-https=false`参数
 
